@@ -1,0 +1,6 @@
+usr/local/bin/evolvechain-qt usr/bin
+share/pixmaps/evolvechain32.xpm usr/share/pixmaps
+share/pixmaps/evolvechain16.xpm usr/share/pixmaps
+share/pixmaps/evolvechain128.png usr/share/pixmaps
+debian/evolvechain-qt.desktop usr/share/applications
+debian/evolvechain-qt.protocol usr/share/kde4/services/

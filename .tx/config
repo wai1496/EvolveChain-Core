@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[evolvechain.tx]
+file_filter = src/qt/locale/evolvechain_<lang>.ts
+source_file = src/qt/locale/evolvechain_en.ts
+source_lang = en

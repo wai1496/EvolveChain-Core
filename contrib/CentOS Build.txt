@@ -1,0 +1,102 @@
+cd /tmp
+yum clean all
+yum update glibc\*
+yum update yum\* rpm\* python\*
+yum clean all
+yum update
+reboot 
+yum install lynx python-devel qt-devel db4-devel zlib-devel db4 gcc-c++ rpm-build git redhat-rpm-config openssl-devel
+yum -y install glibc.i686
+yum -y groupinstall 'Development tools'
+yum install zlib-static
+
+http://linux.ringingliberty.com/bitcoin/el6/SRPMS/repoview/openssl.html
+download from above link
+wget http://linux.ringingliberty.com/bitcoin/el6/SRPMS/openssl-1.0.0j-2ec.el6.src.rpm
+rpm -Uvf open-1.0.0j-2ec.el6.src.rpm
+
+cp rpmbuild/SOURCES/openssl-1.0.0j.tar.gz /deps/openssl-1.0.0j.tar.gz
+tar xvfz openssl-1.0.0j.tar.gz
+cd openssl-1.0.0j
+./config --prefix=/deps --openssldir=/deps/openssl -fPIC no-shared enable-ec enable-ecdh enable-ecdsa
+
+make && make install
+
+
+export OPENSSL_INCLUDE_PATH="/usr/local/ssl/include"
+export OPENSSL_LIB_PATH="/usr/local/ssl/lib"
+	
+cd /deps/
+wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
+tar xvfz db-4.8.30.NC.tar.gz
+cd db-4.8.30.NC/build_unix
+../dist/configure --enable-cxx --disable-shared --disable-replication
+make
+
+cd /deps/
+wget http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
+mv download boost_1_55_0.tar.gz
+tar xvf boost_1_55_0.tar.gz
+cd boost_1_55_0
+./bootstrap.sh
+./bjam install
+
+cd /deps/
+wget http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.9.20140911.tar.gz
+tar xvf download.php?file=miniupnpc-1.9.20140911.tar.gz
+mv miniupnpc-1.9.20140911 miniupnp
+cd miniupnp
+make -f Makefile
+
+cd /deps/
+wget http://protobuf.googlecode.com/files/protobuf-2.5.0.zip
+unzip protobuf-2.5.0.zip
+cd protobuf-2.5.0/
+./configure --disable-shared
+make
+
+cd /deps/
+wget http://prdownloads.sourceforge.net/libpng/libpng-1.6.12.tar.gz?download
+tar xvf libpng-1.6.12.tar.gz?download
+cd libpng-1.6.12
+./configure --disable-shared
+make
+cp .libs/libpng16.a .libs/libpng.a
+
+cd /deps/
+wget http://fukuchi.org/works/qrencode/qrencode-3.4.4.tar.gz
+tar xvf qrencode-3.4.4.tar.gz
+cd qrencode-3.4.4
+LIBS="/deps/libpng-1.6.12/.libs/libpng.a /usr/lib64/libz.a" \
+png_CFLAGS="-I../libpng-1.6.12" \
+png_LIBS="-L../libpng-1.6.12/.libs" \
+./configure --enable-static --disable-shared --without-tools
+make
+
+
+cd /tmp
+git clone https://github.com/EvolveChain-Project/EvolveChain-Core
+cd EvolveChain-Core
+chmod 777 autogen.sh
+./autogen.sh
+
+CPPFLAGS="-I/deps/boost_1_55_0 \
+-I/deps/db-4.8.30.NC/build_unix \
+-I/deps/openssl \
+-I/deps \
+-I/deps/protobuf-2.5.0/src \
+-I/deps/libpng-1.6.12 \
+-I/deps/qrencode-3.4.4" \
+LDFLAGS="-L/deps/boost_1_55_0/stage/lib \
+-L/deps/db-4.8.30.NC/build_unix \
+-L/deps/openssl \
+-L/deps/miniupnpc \
+-L/deps/protobuf-2.5.0/src/.libs \
+-L/deps/libpng-1.6.12/.libs \
+-L/deps/qrencode-3.4.4/.libs" \
+./configure \
+--disable-upnp-default \
+--disable-tests \
+--with-protoc-bindir=/c/deps/protobuf-2.5.0/src
+
+make

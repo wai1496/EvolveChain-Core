@@ -1,0 +1,12 @@
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/boost-linux.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/boost-win.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/deps-linux.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/deps-win.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/gitian-osx-depends.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/gitian-osx-evolvechain.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/gitian-osx-native.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/gitian-osx-qt.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/protobuf-win.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/qt-linux.yml
+./bin/gbuild ../EvolveChain-Core/contrib/gitian-descriptors/qt-win.yml

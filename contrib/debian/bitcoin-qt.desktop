@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=EvolveChain
+Comment=EvolveChain P2P Cryptocurrency
+Comment[fr]=EvolveChain, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=EvolveChain, eşten eşe kriptografik sanal para birimi
+Exec=evolvechain-qt %u
+Terminal=false
+Type=Application
+Icon=evolvechain128
+MimeType=x-scheme-handler/evolvechain;
+Categories=Office;Finance;

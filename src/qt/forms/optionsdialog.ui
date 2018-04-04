@@ -1,0 +1,1436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OptionsDialog</class>
+ <widget class="QDialog" name="OptionsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>697</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Options</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <layout class="QVBoxLayout" name="verticalLayout_Bottom">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tabMain">
+         <attribute name="title">
+          <string>&amp;Main</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_Main">
+          <item>
+           <widget class="QCheckBox" name="evolvechainAtStartup">
+            <property name="toolTip">
+             <string>Automatically start EvolveChain after logging in to the system.</string>
+            </property>
+            <property name="text">
+             <string>&amp;Start EvolveChain on system login</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2_Main">
+            <item>
+             <widget class="QLabel" name="databaseCacheLabel">
+              <property name="text">
+               <string>Size of &amp;database cache</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>databaseCache</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="databaseCache"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="databaseCacheUnitLabel">
+              <property name="text">
+               <string>MB</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2_Main">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3_Main">
+            <item>
+             <widget class="QLabel" name="threadsScriptVerifLabel">
+              <property name="text">
+               <string>Number of script &amp;verification threads</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>threadsScriptVerif</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="threadsScriptVerif">
+              <property name="toolTip">
+               <string>(0 = auto, &lt;0 = leave that many cores free)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3_Main">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_Main">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabIdentification">
+         <property name="palette">
+          <palette>
+           <active>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>170</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>85</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </active>
+           <inactive>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>85</green>
+               <blue>127</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>85</red>
+               <green>170</green>
+               <blue>127</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </inactive>
+           <disabled>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>120</red>
+               <green>120</green>
+               <blue>120</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>120</red>
+               <green>120</green>
+               <blue>120</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </disabled>
+          </palette>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <attribute name="title">
+          <string>&amp;Identification</string>
+         </attribute>
+         <widget class="QLabel" name="IdentificationLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>520</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>EvolveChainX uses email and phone identification on the wallet and addresses for all transactions.</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="inEmailLabel">
+          <property name="geometry">
+           <rect>
+            <x>15</x>
+            <y>160</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Email: </string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="identificationEmail">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>160</y>
+            <width>200</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>85</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>170</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Enter a valid email address">Enter valid email address, you will receive email verification code.</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="maxLength">
+           <number>255</number>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="emailGetCode">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>160</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Click to receive code in email">Click to get email verification code</string>
+          </property>
+          <property name="text">
+           <string>G&amp;et code</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="identificationEmailCode">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>160</y>
+            <width>60</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Enter email code">Enter 6 digit email verification code, you received in your inbox/spam folder in email</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="maxLength">
+           <number>6</number>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="emailVerify">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>160</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Click to verify">Click to verify email </string>
+          </property>
+          <property name="text">
+           <string>&amp;Verify</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="inPhoneLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>190</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Phone:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="identificationPhone">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>190</y>
+            <width>200</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Enter a valid phone number with international code ">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a valid phone number with International code (only numbers, no &quot;+&quot;) [998887776666]. You will receive SMS on this phone for verification.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="inputMask">
+           <string/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="maxLength">
+           <number>20</number>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="phoneGetCode">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>190</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Click to receive code on phone">Click to get phone verification code</string>
+          </property>
+          <property name="text">
+           <string>Get &amp;code</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="identificationPhoneCode">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>190</y>
+            <width>60</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Enter phone code">Enter 6 digit phone verification code you received on mobile</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="maxLength">
+           <number>6</number>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="phoneVerify">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>190</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Click to verify">Click to verify phone</string>
+          </property>
+          <property name="text">
+           <string>Ver&amp;ify</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="confirmVerification">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>220</y>
+            <width>224</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>85</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>85</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>170</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="toolTip">
+           <string>Confirm </string>
+          </property>
+          <property name="text">
+           <string>Confirm verificatio&amp;n</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="startVerification">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>130</y>
+            <width>200</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>85</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>85</green>
+                <blue>127</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>170</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>&amp;Start Verification</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="errLabel">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>250</y>
+            <width>430</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <kerning>false</kerning>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+          <property name="text">
+           <string>Let's start verification!</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="infoLabel">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>290</y>
+            <width>431</width>
+            <height>70</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(170, 0, 0);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="identificationExtra">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>220</y>
+            <width>200</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="Enter a valid phone number with international code ">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Additional information you would like to add, e.g. SSN, PAN, Govt. ID, Full name, Facebook, Twitter,  LinkedIn, Google+ URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="maxLength">
+           <number>64</number>
+          </property>
+         </widget>
+         <widget class="QLabel" name="inExtraLabel">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>220</y>
+            <width>46</width>
+            <height>13</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Info:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="getNewAddressButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>130</y>
+            <width>224</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string>Once verified, you can get a new EvolveChainX address verified with the same details.</string>
+          </property>
+          <property name="text">
+           <string>Get new address with same de&amp;tails</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="checkKYC">
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>100</y>
+            <width>224</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Check KYC info</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="kyc_id">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>100</y>
+            <width>200</width>
+            <height>20</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>80</y>
+            <width>200</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>KYC ID: Know your customer</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>431</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;p&gt;KYC is mandatory for EvolveChainX Technical wallet. &lt;br/&gt;Please visit &lt;a href=&quot;https://kycglobal.net&quot; target=&quot;_blank&quot;&gt;https://KYCGlobal.net&lt;/a&gt;&lt;/p&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="openExternalLinks">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="KYC_error">
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>80</y>
+            <width>221</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>KYC Result</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tabWallet">
+         <attribute name="title">
+          <string>W&amp;allet</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_Wallet">
+          <item>
+           <widget class="QLabel" name="transactionFeeInfoLabel">
+            <property name="text">
+             <string>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB.</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::PlainText</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_1_Wallet">
+            <item>
+             <widget class="QLabel" name="transactionFeeLabel">
+              <property name="text">
+               <string>Pay transaction &amp;fee</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>transactionFee</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="EvolveChainAmountField" name="transactionFee"/>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_1_Wallet">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_Wallet">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>Expert</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QCheckBox" name="coinControlFeatures">
+               <property name="toolTip">
+                <string>Whether to show coin control features or not.</string>
+               </property>
+               <property name="text">
+                <string>Enable coin &amp;control features</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="spendZeroConfChange">
+               <property name="toolTip">
+                <string>If you disable the spending of unconfirmed change, the change from a transaction cannot be used until that transaction has at least one confirmation. This also affects how your balance is computed.</string>
+               </property>
+               <property name="text">
+                <string>&amp;Spend unconfirmed change</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabNetwork">
+         <attribute name="title">
+          <string>&amp;Network</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_Network">
+          <item>
+           <widget class="QCheckBox" name="mapPortUpnp">
+            <property name="toolTip">
+             <string>Automatically open the EvolveChain client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+            </property>
+            <property name="text">
+             <string>Map port using &amp;UPnP</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="connectSocks">
+            <property name="toolTip">
+             <string>Connect to the EvolveChain network through a SOCKS proxy.</string>
+            </property>
+            <property name="text">
+             <string>&amp;Connect through SOCKS proxy (default proxy):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_1_Network">
+            <item>
+             <widget class="QLabel" name="proxyIpLabel">
+              <property name="text">
+               <string>Proxy &amp;IP:</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>proxyIp</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QValidatedLineEdit" name="proxyIp">
+              <property name="minimumSize">
+               <size>
+                <width>140</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="proxyPortLabel">
+              <property name="text">
+               <string>&amp;Port:</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>proxyPort</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="proxyPort">
+              <property name="minimumSize">
+               <size>
+                <width>55</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>55</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Port of the proxy (e.g. 9050)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="socksVersionLabel">
+              <property name="text">
+               <string>SOCKS &amp;Version:</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>socksVersion</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QValueComboBox" name="socksVersion">
+              <property name="toolTip">
+               <string>SOCKS version of the proxy (e.g. 5)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_1_Network">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_Network">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabWindow">
+         <attribute name="title">
+          <string>&amp;Window</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_Window">
+          <item>
+           <widget class="QCheckBox" name="minimizeToTray">
+            <property name="toolTip">
+             <string>Show only a tray icon after minimizing the window.</string>
+            </property>
+            <property name="text">
+             <string>&amp;Minimize to the tray instead of the taskbar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="minimizeOnClose">
+            <property name="toolTip">
+             <string>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</string>
+            </property>
+            <property name="text">
+             <string>M&amp;inimize on close</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_Window">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabDisplay">
+         <attribute name="title">
+          <string>&amp;Display</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_Display">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_1_Display">
+            <item>
+             <widget class="QLabel" name="langLabel">
+              <property name="text">
+               <string>User Interface &amp;language:</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>lang</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QValueComboBox" name="lang">
+              <property name="toolTip">
+               <string>The user interface language can be set here. This setting will take effect after restarting EvolveChain.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2_Display">
+            <item>
+             <widget class="QLabel" name="unitLabel">
+              <property name="text">
+               <string>&amp;Unit to show amounts in:</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::PlainText</enum>
+              </property>
+              <property name="buddy">
+               <cstring>unit</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QValueComboBox" name="unit">
+              <property name="toolTip">
+               <string>Choose the default subdivision unit to show in the interface and when sending coins.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="displayAddresses">
+            <property name="toolTip">
+             <string>Whether to show EvolveChain addresses in the transaction list or not.</string>
+            </property>
+            <property name="text">
+             <string>&amp;Display addresses in transaction list</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3_Display">
+            <item>
+             <widget class="QLabel" name="thirdPartyTxUrlsLabel">
+              <property name="toolTip">
+               <string>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</string>
+              </property>
+              <property name="text">
+               <string>Third party transaction URLs</string>
+              </property>
+              <property name="buddy">
+               <cstring>thirdPartyTxUrls</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="thirdPartyTxUrls">
+              <property name="toolTip">
+               <string>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_Display">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="overriddenByCommandLineLabel">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::PlainText</enum>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_Bottom">
+        <item>
+         <widget class="QLabel" name="overriddenByCommandLineInfoLabel">
+          <property name="text">
+           <string>User command-line options that override above options:</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_Bottom">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_Buttons">
+     <item>
+      <widget class="QPushButton" name="resetButton">
+       <property name="toolTip">
+        <string>Reset all client options to default.</string>
+       </property>
+       <property name="text">
+        <string>&amp;Reset Options</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>48</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="statusLabel">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>48</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="okButton">
+       <property name="text">
+        <string>&amp;OK</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>&amp;Cancel</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>EvolveChainAmountField</class>
+   <extends>QLineEdit</extends>
+   <header>evolvechainamountfield.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qvalidatedlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QValueComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qvaluecombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>startVerification</tabstop>
+  <tabstop>identificationEmail</tabstop>
+  <tabstop>emailGetCode</tabstop>
+  <tabstop>identificationEmailCode</tabstop>
+  <tabstop>emailVerify</tabstop>
+  <tabstop>identificationPhone</tabstop>
+  <tabstop>phoneGetCode</tabstop>
+  <tabstop>identificationPhoneCode</tabstop>
+  <tabstop>phoneVerify</tabstop>
+  <tabstop>identificationExtra</tabstop>
+  <tabstop>confirmVerification</tabstop>
+  <tabstop>getNewAddressButton</tabstop>
+  <tabstop>evolvechainAtStartup</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>threadsScriptVerif</tabstop>
+  <tabstop>databaseCache</tabstop>
+  <tabstop>transactionFee</tabstop>
+  <tabstop>coinControlFeatures</tabstop>
+  <tabstop>spendZeroConfChange</tabstop>
+  <tabstop>mapPortUpnp</tabstop>
+  <tabstop>connectSocks</tabstop>
+  <tabstop>proxyIp</tabstop>
+  <tabstop>proxyPort</tabstop>
+  <tabstop>socksVersion</tabstop>
+  <tabstop>minimizeToTray</tabstop>
+  <tabstop>minimizeOnClose</tabstop>
+  <tabstop>lang</tabstop>
+  <tabstop>unit</tabstop>
+  <tabstop>displayAddresses</tabstop>
+  <tabstop>thirdPartyTxUrls</tabstop>
+  <tabstop>resetButton</tabstop>
+  <tabstop>okButton</tabstop>
+  <tabstop>cancelButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
